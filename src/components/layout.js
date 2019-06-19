@@ -8,16 +8,19 @@ import './layout.css'
 
 
 class Layout extends React.Component {
+
   render() {
+    const text = "this is a location that I am quite fond of for various reasons! I would recommend it to people who like similar things."
+
     return (
       <div>
         <Menu />
-        <Tile title="potato"/>
-        <Tile title="salad"/>
-        <Tile title="abigail"/>
-        <Tile title="potato"/>
-        <Tile title="salad"/>
-        <Tile title="abigail"/>
+        <Tile title="potato" text={text} />
+        <Tile title="salad" text={text} />
+        <Tile title="abigail" text={text} />
+        <Tile title="potato" text={text} />
+        <Tile title="salad" text={text} />
+        <Tile title="abigail" text={text} />
         <Map />
       </div>
     )
