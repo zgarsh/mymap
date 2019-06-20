@@ -2,8 +2,9 @@
   position: sticky;
   margin: 10px;
   border-radius: 18px;
-  background-color: rgb(230, 230, 230, 0.8);
+  background-color: rgb(230, 230, 230, 0.5);
   z-index: 2;
+  width: 20rem;
 }
 
 .Map {

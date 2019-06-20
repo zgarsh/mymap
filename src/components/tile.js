@@ -5,7 +5,7 @@ import {Button, Card} from 'react-bootstrap';
 class Tile extends React.Component{
   render(){
     return(
-      <Card className="Card" style={{ width: '18rem' }}>
+      <Card className="Card">
         <Card.Body>
           <Card.Title>{this.props.title}</Card.Title>
           <Card.Text>{this.props.text}</Card.Text>

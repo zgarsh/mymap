@@ -20,7 +20,10 @@ class Layout extends React.Component {
         <Tile title="Hi Tops 🏳️‍🌈🏅🍺" text={text} />
         <Tile title="Butter 🥤🚜🥫" text={text} />
         <Tile title="Wilkommen 🇩🇪🍻🌿" text={text} />
-        <Tile title="Latin America Club 🇲🇽🧂" text={text} />
+        <Tile title="Flick's" text={text} />
+        <Tile title="Amigo room" text={text} />
+        <Tile title="" text={text} />
+        <Tile title="" text={text} />
       </div>
     )
   };
