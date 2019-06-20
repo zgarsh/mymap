@@ -19,8 +19,8 @@ class Layout extends React.Component {
         <Tile title="Last Rites 💀🍹🔥" text={text} />
         <Tile title="Hi Tops 🏳️‍🌈🏅🍺" text={text} />
         <Tile title="Butter 🥤🚜🥫" text={text} />
-        <Tile title="Wilkommen 🇩🇪🍻🌿🥨" text={text} />
-        <Tile title="Latin America Club 🧂" text={text} />
+        <Tile title="Wilkommen 🇩🇪🍻🌿" text={text} />
+        <Tile title="Latin America Club 🇲🇽🧂" text={text} />
       </div>
     )
   };
