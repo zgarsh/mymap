@@ -1,17 +1,16 @@
 .Card {
+  position: sticky;
   margin: 10px;
   border-radius: 18px;
   background-color: rgb(230, 230, 230, 0.8);
+  z-index: 2;
 }
 
 .Map {
-  position: absolute; top: 0; left: 0; height: 100%; width: 100%;
-
   position: fixed;
-  /*top: 0px;
-
-  width: 100%;
-  height: 100%; */
-
-  z-index: -1;
+  top: 10px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
+  z-index: 1;
 }

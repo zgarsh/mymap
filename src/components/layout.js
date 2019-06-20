@@ -15,13 +15,12 @@ class Layout extends React.Component {
     return (
       <div>
         <Menu />
-        <Tile title="potato" text={text} />
-        <Tile title="salad" text={text} />
-        <Tile title="abigail" text={text} />
-        <Tile title="potato" text={text} />
-        <Tile title="salad" text={text} />
-        <Tile title="abigail" text={text} />
         <Map />
+        <Tile title="Last Rites 💀🍹🔥" text={text} />
+        <Tile title="Hi Tops 🏳️‍🌈🏅🍺" text={text} />
+        <Tile title="Butter 🥤🚜🥫" text={text} />
+        <Tile title="Wilkommen 🇩🇪🍻🌿🥨" text={text} />
+        <Tile title="Latin America Club 🧂" text={text} />
       </div>
     )
   };
