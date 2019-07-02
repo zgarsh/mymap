@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Menu from './menu';
 import Tile from './tile';
@@ -14,12 +15,13 @@ class Layout extends React.Component {
 
     return (
       <div>
-        <Menu />
+        {/*<Menu />*/}
         <Map />
         <Tile title="Last Rites 💀🍹🔥" text={text} />
         <Tile title="Hi Tops 🏳️‍🌈🏅🍺" text={text} />
         <Tile title="Butter 🥤🚜🥫" text={text} />
         <Tile title="Wilkommen 🇩🇪🍻🌿" text={text} />
+        <Tile title="The Willows 🥃🍔🍺" text={text} />
         <Tile title="Flick's" text={text} />
         <Tile title="Amigo room" text={text} />
         <Tile title="" text={text} />

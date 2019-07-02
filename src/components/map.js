@@ -25,7 +25,7 @@ class Map extends React.Component {
       center: [lng, lat],
       zoom
     });
-
+    
     map.on('move', () => {
       const { lng, lat } = map.getCenter();
 
