@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {Button, Card} from 'react-bootstrap';
 
-import Style from './layout'
+// import Style from './layout'
 
 const StyledTile = styled.div`
   position: sticky;
@@ -19,11 +19,11 @@ class Tile extends React.Component{
     return(
       <StyledTile>
         <Card>
-        <Card.Body>
-          <Card.Title><a href="#">{this.props.title}</a></Card.Title>
-          <Card.Text>{this.props.text}</Card.Text>
-        </Card.Body>
-      </Card>
+          <Card.Body>
+            <Card.Title><a href="#">{this.props.title}</a></Card.Title>
+            <Card.Text>{this.props.text}</Card.Text>
+          </Card.Body>
+        </Card>
       </StyledTile>
   );
   }

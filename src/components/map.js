@@ -1,13 +1,26 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import styled from 'styled-components'
+
 import mapboxgl from 'mapbox-gl'
 
 
+
+// publicly available token
 mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA';
+
+const StyledMap = styled.div`
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 100%;
+  z-index: 1;
+`
 
 class Map extends React.Component {
 
-  constructor(props: Props) {
+  constructor(props) {
     super(props);
     this.state = {
       lng: -122.4397,
@@ -41,13 +54,10 @@ class Map extends React.Component {
     const { lng, lat, zoom } = this.state;
 
     return (
-      <div  className="Map" ref={el => this.mapContainer = el} >
-      {/*
-        <div className="inline-block absolute top left mt12 ml12 bg-darken75 color-white z1 py6 px12 round-full txt-s txt-bold">
-          <div>{`Longitude: ${lng} Latitude: ${lat} Zoom: ${zoom}`}</div>
+      <StyledMap>
+        <div ref={el => this.mapContainer = el}>
         </div>
-      */}
-      </div>
+      </StyledMap>
     );
   }
 }
