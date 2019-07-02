@@ -5,7 +5,7 @@ import Menu from './menu';
 import Tile from './tile';
 import Map from './map';
 
-import './layout.css'
+// import './layout.css'
 
 
 class Layout extends React.Component {

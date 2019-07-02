@@ -7,9 +7,10 @@ import {Button, Card} from 'react-bootstrap';
 const StyledTile = styled.div`
   position: sticky;
   margin: 10px;
-  border-radius: 18px;
-  background-color: rgb(230, 230, 230, 0.5);
-  z-index: 2;
+  border-color: blue;
+  border-radius: 30px !important;
+  // background-color: rgb(230, 230, 230, 0.5);
+  // z-index: 2;
   width: 20rem;
 `
 

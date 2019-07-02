@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import mapboxgl from 'mapbox-gl'
+import mapData from './data.json'
 
 
 
@@ -31,6 +32,23 @@ class Map extends React.Component {
       style: 'mapbox://styles/mapbox/light-v9',
       center: [lng, lat],
       zoom
+    });
+
+    map.on('load', function() {
+      map.addLayer({
+        id: 'favSpots',
+        type: 'symbol',
+        source: {
+          type: 'geojson',
+          data: mapData
+        },
+        layout: {
+          'icon-image': 'hospital-15',
+        },
+        paint: {
+          'icon-color': 'red'
+        }
+      });
     });
 
     map.on('move', () => {
