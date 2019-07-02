@@ -21,7 +21,7 @@ class Tile extends React.Component{
       <StyledTile>
         <Card>
           <Card.Body>
-            <Card.Title><a href="#">{this.props.title}</a></Card.Title>
+            <Card.Title><a href="#">{this.props.title}  {this.props.emoji}</a></Card.Title>
             <Card.Text>{this.props.text}</Card.Text>
           </Card.Body>
         </Card>

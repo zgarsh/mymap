@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import Menu from './menu';
 import Tile from './tile';
 import Map from './map';
+import mapData from './data.json';
 
-// import './layout.css'
 
 
 class Layout extends React.Component {
@@ -15,9 +15,11 @@ class Layout extends React.Component {
 
     return (
       <div>
-        {/*<Menu />*/}
         <Map />
-        <Tile title="Last Rites 💀🍹🔥" text={text} />
+        {mapData.features.map( (item, index) => (
+          <Tile title={item.properties.name} emoji={item.properties.emoji} text={item.properties.description} key={item.id}/>
+        ))}
+        {/*<Tile title="Last Rites 💀🍹🔥" text={text} />
         <Tile title="Hi Tops 🏳️‍🌈🏅🍺" text={text} />
         <Tile title="Butter 🥤🚜🥫" text={text} />
         <Tile title="Wilkommen 🇩🇪🍻🌿" text={text} />
@@ -26,6 +28,7 @@ class Layout extends React.Component {
         <Tile title="Amigo room" text={text} />
         <Tile title="" text={text} />
         <Tile title="" text={text} />
+        */}
       </div>
     )
   };

@@ -4,6 +4,7 @@
         "type": "Feature",
         "properties": {
           "name": "Last Rites",
+          "description": "Fun bar with flaming drinks",
           "emoji": "💀🍹🔥"
         },
         "geometry": {
@@ -13,13 +14,14 @@
           ],
           "type": "Point"
         },
-        "id": "0324a5bdcf68761fb90038ef6be0a829"
+        "id": 1
       },
       {
         "type": "Feature",
         "properties": {
           "name": "Hi Tops",
-          "emoji": "🏳️ 🌈🏅🍺"
+          "description": "My absolute favorite bar. NACHOOOOS",
+          "emoji": "🌈🏅🍺"
         },
         "geometry": {
           "coordinates": [
@@ -28,7 +30,71 @@
           ],
           "type": "Point"
         },
-        "id": "bfa17ca6c72748c0ecef71f24b80c4cf"
+        "id": 2
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Butter",
+          "description": "Fanta-rimmed mason jars with grape soda cocktails inside, jello shots, spaghettios",
+          "emoji": "🥤🚜🥫"
+        },
+        "geometry": {
+          "coordinates": [
+            -122.413296,
+            37.771089
+          ],
+          "type": "Point"
+        },
+        "id": 3
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Willkommen",
+          "description": "Biergarten. Get pretzel sticks.",
+          "emoji": "🇩🇪🍻🌿"
+        },
+        "geometry": {
+          "coordinates": [
+            -122.430803,
+            37.766447
+          ],
+          "type": "Point"
+        },
+        "id": 4
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "The Willows",
+          "description": "Nonpretentious. Good bar food.",
+          "emoji": "🥃🍔🍺"
+        },
+        "geometry": {
+          "coordinates": [
+            -122.415119,
+            37.771102
+          ],
+          "type": "Point"
+        },
+        "id": 5
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Flick's",
+          "description": "Cheap drinks and unbeatable jams. Just make sure it's not karaoke night",
+          "emoji": ""
+        },
+        "geometry": {
+          "coordinates": [
+            -117.154753,
+            32.748225
+          ],
+          "type": "Point"
+        },
+        "id": 6
       }
     ],
     "type": "FeatureCollection"
