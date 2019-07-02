@@ -9,12 +9,6 @@ import mapboxgl from 'mapbox-gl'
 mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmbDZmangifQ.-g_vE53SD2WrJ6tFX7QHmA';
 
 const StyledMap = styled.div`
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  height: 100%;
   z-index: 1;
 `
 
@@ -38,7 +32,7 @@ class Map extends React.Component {
       center: [lng, lat],
       zoom
     });
-    
+
     map.on('move', () => {
       const { lng, lat } = map.getCenter();
 
@@ -48,6 +42,7 @@ class Map extends React.Component {
         zoom: map.getZoom().toFixed(2)
       });
     });
+
   }
 
   render() {
@@ -55,8 +50,13 @@ class Map extends React.Component {
 
     return (
       <StyledMap>
-        <div ref={el => this.mapContainer = el}>
-        </div>
+        <div ref={el => this.mapContainer = el} style={{
+          position: 'fixed',
+          top: 0,
+          bottom: 0,
+          width: '100%',
+          height: '100%',
+          }} />
       </StyledMap>
     );
   }
