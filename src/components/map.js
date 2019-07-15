@@ -51,7 +51,7 @@ class Map extends React.Component {
       // el.className = 'mark';
       el.innerHTML += marker.properties.emoji;
       el.style.fontSize = 'x-large';
-      el.style.backgroundColor = 'rgb(230, 230, 230, 0.5)';
+      el.style.backgroundColor = 'rgb(230, 230, 230, 0.6)';
       el.style.border = '1px solid black';
       el.style.borderRadius = '5px';
       el.style.padding = '5px';
