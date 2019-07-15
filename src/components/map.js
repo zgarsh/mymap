@@ -2,7 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 import mapboxgl from 'mapbox-gl'
+
 import mapData from './data.json'
+import Tile from './tile'
+import { removeProperties } from '@babel/types';
+
+import 'mapbox-gl/dist/mapbox-gl.css'
 
 
 
@@ -24,6 +29,8 @@ class Map extends React.Component {
     };
   }
 
+  // componentDidMount() is a react function that is called immediately after the render function. 'mounting' means inserting a component into the tree
+  // note: if you need to get data from a remote endpoint, this is the place to do it!
   componentDidMount() {
     const { lng, lat, zoom } = this.state;
 
@@ -34,22 +41,30 @@ class Map extends React.Component {
       zoom
     });
 
-    map.on('load', function() {
-      map.addLayer({
-        id: 'favSpots',
-        type: 'symbol',
-        source: {
-          type: 'geojson',
-          data: mapData
-        },
-        layout: {
-          'icon-image': 'hospital-15',
-        },
-        paint: {
-          'icon-color': 'red'
-        }
+
+    //// ADDING FAV SPOTS ////
+    // after the map component is mounted, we want to add points to it
+    mapData.features.forEach(function(marker) {
+      // create a DOM element for the marker - these are the divs which house each emoji marker
+      var el = document.createElement('div');
+      
+      // el.className = 'mark';
+      el.innerHTML += marker.properties.emoji;
+      el.style.fontSize = 'x-large';
+      el.style.backgroundColor = 'rgb(230, 230, 230, 0.5)';
+      el.style.border = '1px solid black';
+      el.style.borderRadius = '5px';
+      el.style.padding = '5px';
+       
+      // el.addEventListener('click', function() {
+      // window.alert('nothing to see here');
+      // });
+       
+      new mapboxgl.Marker(el)
+      .setLngLat(marker.geometry.coordinates)
+      .addTo(map);
       });
-    });
+
 
     map.on('move', () => {
       const { lng, lat } = map.getCenter();
@@ -61,12 +76,34 @@ class Map extends React.Component {
       });
     });
 
+
+    
+    // function flyToHiTops () {
+    //   map.flyTo({
+    //     center: [-122.431822, 37.764998],
+    //     zoom: 15
+    //   })
+    // }
+
   }
 
+  
+
+  // flyToHiTops = () => {
+  //   this.map.flyTo({
+  //         center: [-122.431822, 37.764998],
+  //         zoom: 15
+  //       })
+  // }
+  
+  
+  
   render() {
     const { lng, lat, zoom } = this.state;
+    
 
     return (
+      <div>
       <StyledMap>
         <div ref={el => this.mapContainer = el} style={{
           position: 'fixed',
@@ -76,6 +113,16 @@ class Map extends React.Component {
           height: '100%',
           }} />
       </StyledMap>
+      {mapData.features.map( (item, index) => (
+        <Tile 
+          title={item.properties.name}
+          emoji={item.properties.emoji}
+          text={item.properties.description}
+          key={item.id}
+          flyToHiTops={this.flyToHiTops}
+        />
+      ))}
+      </div>
     );
   }
 }

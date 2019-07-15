@@ -14,9 +14,15 @@ class Layout extends React.Component {
     return (
       <div>
         <Map />
-        {mapData.features.map( (item, index) => (
-          <Tile title={item.properties.name} emoji={item.properties.emoji} text={item.properties.description} key={item.id}/>
-        ))}
+        {/* {mapData.features.map( (item, index) => (
+          <Tile 
+            title={item.properties.name}
+            emoji={item.properties.emoji}
+            text={item.properties.description}
+            key={item.id}
+            flyToHiTops={this.flyToHiTops}
+          />
+        ))} */}
       </div>
     )
   };
