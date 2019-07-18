@@ -89,18 +89,17 @@ class Map extends React.Component {
 
   
 
-  // flyToHiTops = () => {
-  //   this.map.flyTo({
-  //         center: [-122.431822, 37.764998],
-  //         zoom: 15
-  //       })
-  // }
-  
-  
+  flyToHiTops = () => {
+    this.map.flyTo({
+          center: [-122.431822, 37.764998],
+          zoom: 15
+        })
+  }
+
+
   
   render() {
     const { lng, lat, zoom } = this.state;
-    
 
     return (
       <div>
@@ -119,7 +118,7 @@ class Map extends React.Component {
           emoji={item.properties.emoji}
           text={item.properties.description}
           key={item.id}
-          flyToHiTops={this.flyToHiTops}
+          flyToHiTops={this.flyToHiTops.bind(this)}
         />
       ))}
       </div>
