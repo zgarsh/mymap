@@ -2,22 +2,22 @@ import React from 'react';
 import {Button, Card, ListGroup} from 'react-bootstrap';
 
 
-
+// for some reason styled components aren't working on this one. Doing inline css as suggested here: https://blog.bitsrc.io/5-ways-to-style-react-components-in-2019-30f1ccc2b5b
 const categoryStyle = {
-    position: 'absolute',
-    margin: '10px',
-    paddingTop: '3px',
-    borderRadius: '30px',
+    position: 'relative',
+    float: 'right',
+    margin: '5px',
+    padding: '3px 10px',
+    borderRadius: '10px',
     backgroundColor: 'rgb(230, 230, 230, 0.5)',
     zIndex: 2,
-    width: '10rem',
+    // width: '5rem',
     height: '40px',
-    // width: '100px',
-    right: '0px',
-    top: '0px',
     textAlign: 'center',
     fontSize: 20,
   }
+
+  
 
 
 class CategoryCard extends React.Component{

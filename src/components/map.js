@@ -6,6 +6,7 @@ import mapboxgl from 'mapbox-gl'
 import mapData from './data.json'
 import Tile from './tile'
 import CategoryCard from './category'
+import CategoryList from './listcategories'
 import { removeProperties } from '@babel/types';
 
 import 'mapbox-gl/dist/mapbox-gl.css'
@@ -122,9 +123,7 @@ class Map extends React.Component {
           flyToHiTops={this.flyToHiTops.bind(this)}
         />
       ))}
-      <CategoryCard category={'cafes'}/>
-      <CategoryCard category={'bars'}/>
-      <CategoryCard category={'restaurants'}/>
+      <CategoryList />
       </div>
     );
   }
