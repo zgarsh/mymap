@@ -29,6 +29,7 @@ class Map extends React.Component {
       lat: 37.7626,
       zoom: 10
     };
+    this.map = null
   }
 
   // componentDidMount() is a react function that is called immediately after the render function. 'mounting' means inserting a component into the tree
@@ -41,7 +42,8 @@ class Map extends React.Component {
       style: 'mapbox://styles/mapbox/light-v9',
       center: [lng, lat],
       zoom
-    });
+    }); 
+    this.map = map
 
 
     //// ADDING FAV SPOTS ////
