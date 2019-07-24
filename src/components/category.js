@@ -33,6 +33,7 @@ const CategoryStyle = styled.div`
 
     :hover {
         background: rgb(105, 182, 223, 0.6);
+        cursor: pointer;
     }
 `;
 

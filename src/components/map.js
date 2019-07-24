@@ -27,8 +27,15 @@ class Map extends React.Component {
     this.state = {
       lng: -122.4397,
       lat: 37.7626,
-      zoom: 10
+      zoom: 10,
+      activeCategories: ['bars', 'libraries'],
     };
+    this.map = null;
+    this.onCategoryClick = this.onCategoryClick.bind(this);
+  }
+
+  onCategoryClick(){
+    this.setState({activeCategories: ['I have been clicked!']})
   }
 
   // componentDidMount() is a react function that is called immediately after the render function. 'mounting' means inserting a component into the tree
@@ -43,7 +50,8 @@ class Map extends React.Component {
       zoom
     });
 
-
+    this.map = map;
+    
     //// ADDING FAV SPOTS ////
     // after the map component is mounted, we want to add points to it
     mapData.features.forEach(function(marker) {
@@ -123,7 +131,10 @@ class Map extends React.Component {
           flyToHiTops={this.flyToHiTops.bind(this)}
         />
       ))}
-      <CategoryList />
+      <CategoryList
+        activeCategories={this.state.activeCategories}
+        onClicked={this.onCategoryClick}
+      />
       </div>
     );
   }

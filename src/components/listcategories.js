@@ -13,18 +13,21 @@ const ListStyle = styled.div`
   width: 12em;
 `;
 
+const categories = ['drink', 'eat', 'play', 'work', 'outdoors', 'events']
 
 class CategoryList extends React.Component{
 
   render(){
+      console.log(this.props)
     return(
         <ListStyle>
-        <div>
-            <CategoryCard category={'drink'} />
-            <CategoryCard category={'eat'} />
-            <CategoryCard category={'play'} />
-            <CategoryCard category={'work'} />
-            <CategoryCard category={'outdoors'} />
+        <div>{/* onClick={this.props.onClicked} */}
+        {categories.map( (item, index) => (
+        <CategoryCard 
+          category={item}
+          onClick={this.props.onClicked}
+        />
+      ))}
         </div>
         </ListStyle>
   );
