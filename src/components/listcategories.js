@@ -21,13 +21,14 @@ class CategoryList extends React.Component{
       console.log(this.props)
     return(
         <ListStyle>
-        <div>{/* onClick={this.props.onClicked} */}
+        <div>
         {categories.map( (item, index) => (
         <CategoryCard 
           category={item}
-          onClick={this.props.onClicked}
+          onClick={this.props.onClicked(this.props.category)}
         />
       ))}
+        {/* <CategoryCard category={this.props.activeCategories} /> */}
         </div>
         </ListStyle>
   );

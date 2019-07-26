@@ -28,15 +28,49 @@ class Map extends React.Component {
       lng: -122.4397,
       lat: 37.7626,
       zoom: 10,
-      activeCategories: ['bars', 'libraries'],
+      activeCategories: {
+        play: false,
+        eat: false,
+        drink: false,
+        outdoors: false,
+        work: false,
+      },
     };
     this.map = null;
     this.onCategoryClick = this.onCategoryClick.bind(this);
   }
 
-  onCategoryClick(){
-    this.setState({activeCategories: ['I have been clicked!']})
+  onCategoryClick = (category) =>{
+    let updatedCategories
+    updatedCategories = this.state.activeCategories
+    updatedCategories[category] = !updatedCategories[category]
+  //   // this.state.activeCategories[category] = !this.state.activeCategories[category]
+  //   // this.state.activeCategories[category] = !this.state.activeCategories[category]
+  //   // activeCategories = updatedCategories
+  //   // this.setState(this.state.activeCategories = this.state.activeCategories)
+  //   // this.state.activeCategories[category] = !this.state.activeCategories[category]
+    this.setState({activeCategories:updatedCategories})
   }
+
+  //   // this.setState(prevState => ({
+  //   //   activeCategories[category]: !prevState.activeCategories[category]
+  //   // }));
+
+  // }
+
+
+
+  // onCategoryClick(category){
+  //   this.state.activeCategories[category] = !this.state.activeCategories[category]
+  //   this.setState({activeCategories: ['I have been clicked!']})
+  // }
+
+
+
+
+
+
+
 
   // componentDidMount() is a react function that is called immediately after the render function. 'mounting' means inserting a component into the tree
   // note: if you need to get data from a remote endpoint, this is the place to do it!
@@ -51,7 +85,7 @@ class Map extends React.Component {
     });
 
     this.map = map;
-    
+
     //// ADDING FAV SPOTS ////
     // after the map component is mounted, we want to add points to it
     mapData.features.forEach(function(marker) {
