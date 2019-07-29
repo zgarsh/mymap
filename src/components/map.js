@@ -41,39 +41,14 @@ class Map extends React.Component {
   }
 
   onCategoryClick = (category) =>{
-    let updatedCategories
-    updatedCategories = this.state.activeCategories
-    updatedCategories[category] = !updatedCategories[category]
-  //   // this.state.activeCategories[category] = !this.state.activeCategories[category]
-  //   // this.state.activeCategories[category] = !this.state.activeCategories[category]
-  //   // activeCategories = updatedCategories
-  //   // this.setState(this.state.activeCategories = this.state.activeCategories)
-  //   // this.state.activeCategories[category] = !this.state.activeCategories[category]
-    this.setState({activeCategories:updatedCategories})
+
+    let updatedCategories = this.state.activeCategories;
+
+    updatedCategories[category] = !updatedCategories[category];
+    
+    this.setState({activeCategories:updatedCategories});
   }
 
-  //   // this.setState(prevState => ({
-  //   //   activeCategories[category]: !prevState.activeCategories[category]
-  //   // }));
-
-  // }
-
-
-
-  // onCategoryClick(category){
-  //   this.state.activeCategories[category] = !this.state.activeCategories[category]
-  //   this.setState({activeCategories: ['I have been clicked!']})
-  // }
-
-
-
-
-
-
-
-
-  // componentDidMount() is a react function that is called immediately after the render function. 'mounting' means inserting a component into the tree
-  // note: if you need to get data from a remote endpoint, this is the place to do it!
   componentDidMount() {
     const { lng, lat, zoom } = this.state;
 
@@ -119,16 +94,6 @@ class Map extends React.Component {
         zoom: map.getZoom().toFixed(2)
       });
     });
-
-
-    
-    // function flyToHiTops () {
-    //   map.flyTo({
-    //     center: [-122.431822, 37.764998],
-    //     zoom: 15
-    //   })
-    // }
-
   }
 
   

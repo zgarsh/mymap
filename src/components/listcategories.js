@@ -1,5 +1,4 @@
 import React from 'react';
-import {Button, Card, ListGroup} from 'react-bootstrap';
 
 import styled from 'styled-components';
 
@@ -19,16 +18,17 @@ class CategoryList extends React.Component{
 
   render(){
       console.log(this.props)
+      var thisCategory = this.props.category
     return(
         <ListStyle>
         <div>
         {categories.map( (item, index) => (
         <CategoryCard 
           category={item}
-          onClick={this.props.onClicked(this.props.category)}
+          onClick={(thisCategory)=> this.props.onClicked(thisCategory)}
         />
       ))}
-        {/* <CategoryCard category={this.props.activeCategories} /> */}
+        <CategoryCard category={JSON.stringify(this.props.activeCategories)} />
         </div>
         </ListStyle>
   );
