@@ -16,6 +16,10 @@ const categories = ['drink', 'eat', 'play', 'work', 'outdoors', 'events']
 
 class CategoryList extends React.Component{
 
+  handleClick() {
+    console.log('helloooooo')
+  }
+
   render(){
       // console.log(this.props)
       var thisCategory = this.props.category
@@ -24,9 +28,11 @@ class CategoryList extends React.Component{
         <div>
         {categories.map( (item, index) => (
         <CategoryCard 
-          key={index} // just to appease warning
+          key={index}
           category={item}
-          onClick={(thisCategory)=> this.props.onClicked(thisCategory)}
+          // onClick={(thisCategory)=> this.props.onClicked(thisCategory)}
+          // onClick={()=>{console.log('click??')}}
+          onClick={(e) => this.handleClick(e)}
         />
       ))}
         <CategoryCard category={JSON.stringify(this.props.activeCategories)} />

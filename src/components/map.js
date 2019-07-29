@@ -96,12 +96,12 @@ class Map extends React.Component {
 
   
 
-  flyToHiTops = () => {
-    this.map.flyTo({
-          center: [-122.431822, 37.764998],
-          zoom: 17
-        })
-  }
+  // flyToHiTops = () => {
+  //   this.map.flyTo({
+  //         center: [-122.431822, 37.764998],
+  //         zoom: 17
+  //       })
+  // }
 
   flyToLocation = (location) => {
     this.map.flyTo({
@@ -133,7 +133,7 @@ class Map extends React.Component {
           text={item.properties.description}
           key={item.id}
           coordinates={item.geometry.coordinates}
-          flyToHiTops={this.flyToHiTops.bind(this)}
+          // flyToHiTops={this.flyToHiTops.bind(this)}
           flyToLocation={this.flyToLocation.bind(this)}
         />
       ))}
