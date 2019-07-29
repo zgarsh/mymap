@@ -1,5 +1,5 @@
 import React from 'react';
-import {Nav, NavItem, Navbar, Badge, NavDropdown, Button, Form, FormControl} from 'react-bootstrap';
+import {Nav, Navbar, NavDropdown, Button} from 'react-bootstrap';
 
 
 class Menu extends React.Component{

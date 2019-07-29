@@ -17,13 +17,14 @@ const categories = ['drink', 'eat', 'play', 'work', 'outdoors', 'events']
 class CategoryList extends React.Component{
 
   render(){
-      console.log(this.props)
+      // console.log(this.props)
       var thisCategory = this.props.category
     return(
         <ListStyle>
         <div>
         {categories.map( (item, index) => (
         <CategoryCard 
+          key={index} // just to appease warning
           category={item}
           onClick={(thisCategory)=> this.props.onClicked(thisCategory)}
         />

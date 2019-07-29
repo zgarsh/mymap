@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Button, Card} from 'react-bootstrap';
+import {Card} from 'react-bootstrap';
 
-
-import map from './map';
 
 // import Style from './layout'
 
@@ -29,7 +27,9 @@ class Tile extends React.Component{
   handleClick(){
     console.log(this)
 
-    this.props.flyToHiTops();
+    // this.props.flyToHiTops();
+
+    this.props.flyToLocation(this.props.coordinates)
 
     this.setState(state => ({
       isActive: !state.isActive
@@ -40,7 +40,7 @@ class Tile extends React.Component{
     return(
         <Card style={tileStyle} onClick={this.handleClick}>
           <Card.Body>
-            <Card.Title><a href="#">{this.props.title}  {this.props.emoji}</a></Card.Title>
+            <Card.Title><a href="#">{this.props.title}  {this.props.emoji} {this.props.secondaryEmoji}</a></Card.Title>
             <Card.Text>{this.props.text}</Card.Text>
           </Card.Body>
         </Card>

@@ -5,9 +5,7 @@ import mapboxgl from 'mapbox-gl'
 
 import mapData from './data.json'
 import Tile from './tile'
-import CategoryCard from './category'
 import CategoryList from './listcategories'
-import { removeProperties } from '@babel/types';
 
 import 'mapbox-gl/dist/mapbox-gl.css'
 
@@ -41,12 +39,11 @@ class Map extends React.Component {
   }
 
   onCategoryClick = (category) =>{
-
     let updatedCategories = this.state.activeCategories;
-
     updatedCategories[category] = !updatedCategories[category];
-    
     this.setState({activeCategories:updatedCategories});
+
+    console.log('click! (from map.js)')
   }
 
   componentDidMount() {
@@ -70,10 +67,11 @@ class Map extends React.Component {
       // el.className = 'mark';
       el.innerHTML += marker.properties.emoji;
       el.style.fontSize = 'x-large';
-      el.style.backgroundColor = 'rgb(230, 230, 230, 0.6)';
-      el.style.border = '1px solid black';
-      el.style.borderRadius = '5px';
-      el.style.padding = '5px';
+      el.id = marker.id;
+      // el.style.backgroundColor = 'rgb(230, 230, 230, 0.6)';
+      // el.style.border = '1px solid black';
+      // el.style.borderRadius = '5px';
+      // el.style.padding = '5px';
        
       // el.addEventListener('click', function() {
       // window.alert('nothing to see here');
@@ -101,10 +99,16 @@ class Map extends React.Component {
   flyToHiTops = () => {
     this.map.flyTo({
           center: [-122.431822, 37.764998],
-          zoom: 15
+          zoom: 17
         })
   }
 
+  flyToLocation = (location) => {
+    this.map.flyTo({
+      center: location,
+      zoom: 17
+    })
+  }
 
   
   render() {
@@ -125,9 +129,12 @@ class Map extends React.Component {
         <Tile 
           title={item.properties.name}
           emoji={item.properties.emoji}
+          secondaryEmoji={item.properties.secondaryEmoji}
           text={item.properties.description}
           key={item.id}
+          coordinates={item.geometry.coordinates}
           flyToHiTops={this.flyToHiTops.bind(this)}
+          flyToLocation={this.flyToLocation.bind(this)}
         />
       ))}
       <CategoryList
