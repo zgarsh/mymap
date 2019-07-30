@@ -25,7 +25,7 @@ class Tile extends React.Component{
   }
 
   handleClick(){
-    console.log(this)
+    // console.log(this)
 
     // this.props.flyToHiTops();
 

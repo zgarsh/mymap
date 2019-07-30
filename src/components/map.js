@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import mapboxgl from 'mapbox-gl'
 
 import mapData from './data.json'
-import Tile from './tile'
+import TileList from './tilelist'
 import CategoryList from './listcategories'
 
 import 'mapbox-gl/dist/mapbox-gl.css'
@@ -125,7 +125,7 @@ class Map extends React.Component {
           height: '100%',
           }} />
       </StyledMap>
-      {mapData.features.map( (item, index) => (
+      {/* {mapData.features.map( (item, index) => (
         <Tile 
           title={item.properties.name}
           emoji={item.properties.emoji}
@@ -133,10 +133,12 @@ class Map extends React.Component {
           text={item.properties.description}
           key={item.id}
           coordinates={item.geometry.coordinates}
-          // flyToHiTops={this.flyToHiTops.bind(this)}
           flyToLocation={this.flyToLocation.bind(this)}
         />
-      ))}
+      ))} */}
+      <TileList 
+        flyToLocation={this.flyToLocation.bind(this)}
+      />
       <CategoryList
         activeCategories={this.state.activeCategories}
         onCategoryClick={this.onCategoryClick}
