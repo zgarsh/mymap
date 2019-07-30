@@ -138,6 +138,7 @@ class Map extends React.Component {
       ))} */}
       <TileList 
         flyToLocation={this.flyToLocation.bind(this)}
+        categories={this.state.activeCategories}
       />
       <CategoryList
         activeCategories={this.state.activeCategories}

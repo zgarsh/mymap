@@ -4,15 +4,6 @@ import Tile from './tile.js';
 
 import mapData from './data.json';
 
-const tileListStyle = {
-  position: 'sticky',
-  margin: '10px',
-  borderRadius: '3px',
-  backgroundColor: 'rgb(230, 230, 230, 0.5)',
-  zIndex: 2,
-  width: '20rem',
-}
-
 
 class TileList extends React.Component{
   constructor(props){
@@ -32,9 +23,16 @@ class TileList extends React.Component{
 //   }
 
   render(){
+
+    let filteredLocations = mapData.features.filter((item) => {
+        return this.props.categories[item.properties.category] === true
+    })
+
+    // let filteredLocations = mapData.features
+
     return(
         <div>
-        {mapData.features.map( (item, index) => (
+        {filteredLocations.map( (item, index) => (
             <Tile 
               title={item.properties.name}
               emoji={item.properties.emoji}

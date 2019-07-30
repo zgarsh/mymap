@@ -5,7 +5,7 @@
         "properties": {
           "name": "Last Rites",
           "description": "Fun bar with flaming drinks",
-          "category": "bar",
+          "category": "drink",
           "emoji": "💀",
           "secondaryEmoji": "🍹🔥"
         },
@@ -23,7 +23,7 @@
         "properties": {
           "name": "Hi Tops",
           "description": "Creme de la creme. NACHOOOOS",
-          "category": "bar",
+          "category": "drink",
           "emoji": "🏅",
           "secondaryEmoji": "🍺"
         },
@@ -41,7 +41,7 @@
         "properties": {
           "name": "Butter",
           "description": "Fanta-rimmed mason jars with grape soda cocktails inside, jello shots, spaghettios",
-          "category": "bar",
+          "category": "drink",
           "emoji": "🥤",
           "secondaryEmoji": "🚜🥫"
         },
@@ -59,7 +59,7 @@
         "properties": {
           "name": "Willkommen",
           "description": "Biergarten. Get pretzel sticks.",
-          "category": "bar",
+          "category": "drink",
           "emoji": "🇩🇪",
           "secondaryEmoji": "🍻🌿"
         },
@@ -77,7 +77,7 @@
         "properties": {
           "name": "The Willows",
           "description": "Nonpretentious. Good bar food.",
-          "category": "bar",
+          "category": "drink",
           "emoji": "🥃",
           "secondaryEmoji": "🍔🍺"
         },
@@ -95,7 +95,7 @@
         "properties": {
           "name": "Flick's",
           "description": "Cheap drinks and unbeatable jams. Just make sure it's not karaoke night",
-          "category": "bar",
+          "category": "drink",
           "emoji": "🌈"
         },
         "geometry": {

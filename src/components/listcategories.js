@@ -36,7 +36,7 @@ class CategoryList extends React.Component{
           onCategoryClick={this.props.onCategoryClick}
         />
       ))}
-        <CategoryCard category={JSON.stringify(this.props.activeCategories)} />
+        {/* <CategoryCard category={JSON.stringify(this.props.activeCategories)} /> */}
         </div>
         </ListStyle>
   );
