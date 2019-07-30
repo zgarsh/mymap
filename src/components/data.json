@@ -96,7 +96,8 @@
           "name": "Flick's",
           "description": "Cheap drinks and unbeatable jams. Just make sure it's not karaoke night",
           "category": "drink",
-          "emoji": "🌈"
+          "emoji": "🌈",
+          "secondaryEmoji": "🍹🔥"
         },
         "geometry": {
           "coordinates": [
@@ -106,7 +107,138 @@
           "type": "Point"
         },
         "id": 6
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Saru Sushi",
+          "description": "Get the spicy tuna seaweed things and the popcorn roll",
+          "category": "eat",
+          "emoji": "🐟",
+          "secondaryEmoji": ""
+        },
+        "geometry": {
+          "coordinates": [ -122.428806, 37.751763 ],
+          "type": "Point"
+        },
+        "id": 7
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Flores",
+          "description": "Huarache, mole, cornmeal pancakes. Haven't had anything bad here.",
+          "category": "eat",
+          "emoji": "🥑",
+          "secondaryEmoji": ""
+        },
+        "geometry": {
+          "coordinates": [ -122.432574, 37.797602],
+          "type": "Point"
+        },
+        "id": 8
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Orphan Andy's",
+          "description": "Always open, but it's the most fun between 10pm and 2 am",
+          "category": "eat",
+          "emoji": "🥞",
+          "secondaryEmoji": ""
+        },
+        "geometry": {
+          "coordinates": [ -122.434908, 37.762397],
+          "type": "Point"
+        },
+        "id": 9
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "In n out",
+          "description": "The only reason I know of to venture into fisherman's wharf",
+          "category": "eat",
+          "emoji": "🍔",
+          "secondaryEmoji": ""
+        },
+        "geometry": {
+          "coordinates": [-122.418558, 37.807737 ],
+          "type": "Point"
+        },
+        "id": 10
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Hard water",
+          "description": "My favorite fancy bar",
+          "category": "drink",
+          "emoji": "🥃",
+          "secondaryEmoji": ""
+        },
+        "geometry": {
+          "coordinates": [ -122.395572, 37.797624 ],
+          "type": "Point"
+        },
+        "id": 11
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Equator Coffee",
+          "description": "",
+          "category": "work",
+          "emoji": "☕️",
+          "secondaryEmoji": ""
+        },
+        "geometry": {
+          "coordinates": [ -122.431888, 37.805311 ],
+          "type": "Point"
+        },
+        "id": 12
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Tartine Sunset",
+          "description": "Not as pretentious as the manufactory",
+          "category": "eat",
+          "emoji": "",
+          "secondaryEmoji": ""
+        },
+        "geometry": {
+          "coordinates": [ -122.466172, 37.765382 ],
+          "type": "Point"
+        },
+        "id": 13
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "SF Botanical Garden",
+          "description": "Free for SF residents! Like Dolores except peaceful",
+          "category": "outdoors",
+          "emoji": "🌳",
+          "secondaryEmoji": ""
+        },
+        "geometry": {
+          "coordinates": [ -122.467052, 37.767078 ],
+          "type": "Point"
+        },
+        "id": 14
       }
+
+
+
+
+
+
+
+
+
+
+
     ],
     "type": "FeatureCollection"
   }

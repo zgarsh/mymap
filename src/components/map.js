@@ -17,6 +17,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4M29iazA2Z2gycXA4N2pmb
 const StyledMap = styled.div`
   z-index: 1;
 `
+let filteredLocations = []
 
 class Map extends React.Component {
 
@@ -43,7 +44,6 @@ class Map extends React.Component {
     updatedCategories[category] = !updatedCategories[category];
     this.setState({activeCategories:updatedCategories});
 
-    // console.log('click! (from map.js)')
   }
 
   componentDidMount() {
@@ -60,7 +60,14 @@ class Map extends React.Component {
 
     //// ADDING FAV SPOTS ////
     // after the map component is mounted, we want to add points to it
-    mapData.features.forEach(function(marker) {
+
+    // TODO: how to update this on state change? note - will need to change false to true
+    let filteredLocations = mapData.features.filter((item) => {
+        return this.state.activeCategories[item.properties.category] === false
+    })
+
+    filteredLocations.forEach(function(marker) {
+    // mapData.features.forEach(function(marker) {
       // create a DOM element for the marker - these are the divs which house each emoji marker
       var el = document.createElement('div');
       
