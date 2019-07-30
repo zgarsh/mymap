@@ -43,7 +43,7 @@ class Map extends React.Component {
     updatedCategories[category] = !updatedCategories[category];
     this.setState({activeCategories:updatedCategories});
 
-    console.log('click! (from map.js)')
+    // console.log('click! (from map.js)')
   }
 
   componentDidMount() {
@@ -139,7 +139,7 @@ class Map extends React.Component {
       ))}
       <CategoryList
         activeCategories={this.state.activeCategories}
-        onClicked={this.onCategoryClick}
+        onCategoryClick={this.onCategoryClick}
       />
       </div>
     );

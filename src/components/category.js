@@ -25,24 +25,26 @@ const CategoryStyle = styled.div`
 class CategoryCard extends React.Component{
   constructor(props){
     super(props);
-    this.state = { isActive: false};
+    // this.state = { isActive: false};
 
     // This bind is necessary to make `this` work in the callback in handleClick()
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(){
-    // console.log(this)
-    console.log('click! from category')
+  // handleClick(){
+  //   // console.log(this)
+  //   // console.log('click! from category')
 
-    this.setState(state => ({
-      isActive: !state.isActive
-    }));
-  }
+  //   this.setState(state => ({
+  //     isActive: !state.isActive
+  //   }));
+  // }
 
   render(){
     return(
-        <CategoryStyle>
+        <CategoryStyle
+          onClick={()=>this.props.onCategoryClick(this.props.category)}
+        >
             {this.props.category}
         </CategoryStyle>
   );
