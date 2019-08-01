@@ -34,6 +34,7 @@ class CategoryList extends React.Component{
           // onClick={()=>{console.log('click??')}}
           // onClick={(e) => this.handleClick(e)}
           onCategoryClick={this.props.onCategoryClick}
+          isActive={this.props.activeCategories[item]} // NEW!!!
         />
       ))}
         {/* <CategoryCard category={JSON.stringify(this.props.activeCategories)} /> */}
