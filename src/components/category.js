@@ -54,6 +54,7 @@ class CategoryCard extends React.Component{
     
     return(
         <CategoryStyle
+          isActive={this.props.isActive}
           onClick={()=>this.props.onCategoryClick(this.props.category)}
         >
             {this.props.category} - 
