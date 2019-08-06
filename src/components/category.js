@@ -22,7 +22,7 @@ const CategoryStyle = styled.div`
       cursor: pointer;
   } */
 
-  background-color: ${(props) =>  props.isActive ? "rgb(230, 230, 230, 0.7)" : "green"};
+  background-color: ${(props) =>  props.isActive ? "rgb(76, 166, 70, 0.7)" : "rgb(230, 230, 230, 0.7)"};
 
 `;
 
@@ -57,8 +57,8 @@ class CategoryCard extends React.Component{
           isActive={this.props.isActive}
           onClick={()=>this.props.onCategoryClick(this.props.category)}
         >
-            {this.props.category} - 
-            {JSON.stringify(this.props.isActive)}
+            {this.props.category}
+            {/* {JSON.stringify(this.props.isActive)} */}
         </CategoryStyle>
   );
   }

@@ -187,7 +187,7 @@
         "type": "Feature",
         "properties": {
           "name": "Equator Coffee",
-          "description": "",
+          "description": "Small but in a great setting. Go on a nice day and walk around fort mason",
           "category": "work",
           "emoji": "☕️",
           "secondaryEmoji": ""
@@ -204,7 +204,7 @@
           "name": "Tartine Sunset",
           "description": "Not as pretentious as the manufactory",
           "category": "eat",
-          "emoji": "",
+          "emoji": "🍞",
           "secondaryEmoji": ""
         },
         "geometry": {
@@ -224,6 +224,21 @@
         },
         "geometry": {
           "coordinates": [ -122.467052, 37.767078 ],
+          "type": "Point"
+        },
+        "id": 14
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Mission Bowling Club",
+          "description": "Adults only bowling <3",
+          "category": "play",
+          "emoji": "🎳",
+          "secondaryEmoji": ""
+        },
+        "geometry": {
+          "coordinates": [ -122.416707, 37.763751 ],
           "type": "Point"
         },
         "id": 14

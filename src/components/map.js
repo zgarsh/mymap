@@ -48,7 +48,6 @@ class Map extends React.Component {
 
   componentDidMount() {
     const { lng, lat, zoom } = this.state;
-
     const map = new mapboxgl.Map({
       container: this.mapContainer,
       style: 'mapbox://styles/mapbox/light-v9',
@@ -57,6 +56,7 @@ class Map extends React.Component {
     });
 
     this.map = map;
+    // this is necessary to make 'map' available in the .flyto function
 
     //// ADDING FAV SPOTS ////
     // after the map component is mounted, we want to add points to it
@@ -101,14 +101,6 @@ class Map extends React.Component {
     });
   }
 
-  
-
-  // flyToHiTops = () => {
-  //   this.map.flyTo({
-  //         center: [-122.431822, 37.764998],
-  //         zoom: 17
-  //       })
-  // }
 
   flyToLocation = (location) => {
     this.map.flyTo({
@@ -132,17 +124,6 @@ class Map extends React.Component {
           height: '100%',
           }} />
       </StyledMap>
-      {/* {mapData.features.map( (item, index) => (
-        <Tile 
-          title={item.properties.name}
-          emoji={item.properties.emoji}
-          secondaryEmoji={item.properties.secondaryEmoji}
-          text={item.properties.description}
-          key={item.id}
-          coordinates={item.geometry.coordinates}
-          flyToLocation={this.flyToLocation.bind(this)}
-        />
-      ))} */}
       <TileList 
         flyToLocation={this.flyToLocation.bind(this)}
         categories={this.state.activeCategories}
