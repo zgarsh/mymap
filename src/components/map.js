@@ -50,7 +50,32 @@ class Map extends React.Component {
   clearMapMarkers = (map) =>{
     // map.removeLayer('1');
     // map.removeLayer(el);
-    // map.removeMarker(1);
+    // map.marker.remove();
+
+    var currentMarkers = document.getElementsByClassName('marker');
+    for (let i=0; i<currentMarkers.length; i++){
+      currentMarkers[i].remove()
+    }
+
+
+
+    // console.log(currentMarkers);
+    // // const currentMarkersArray = Array.from(currentMarkers);
+
+    // console.log(currentMarkers.length)
+
+    // var currentMarkersArray = []
+
+    // for (let i=0; i < 9; i++){
+    //   currentMarkersArray.push('yoohooo')
+    // }
+
+    // console.log(currentMarkersArray);
+
+
+    // currentMarkers.forEach((marker) => {
+    //   marker.remove();
+    // })
 
   }
 
@@ -82,14 +107,13 @@ class Map extends React.Component {
       el.innerHTML += marker.properties.emoji;
       el.style.fontSize = 'x-large';
       el.id = marker.id;
+      el.className = 'marker';
       
       // el.addEventListener('click', function() {
       // window.alert('nothing to see here');
       // });
       
-      new mapboxgl.Marker(el)
-      .setLngLat(marker.geometry.coordinates)
-      .addTo(map);
+      var marker = new mapboxgl.Marker(el).setLngLat(marker.geometry.coordinates).addTo(map);
 
       
     });
