@@ -43,8 +43,59 @@ class Map extends React.Component {
     let updatedCategories = this.state.activeCategories;
     updatedCategories[category] = !updatedCategories[category];
     this.setState({activeCategories:updatedCategories});
+    this.clearMapMarkers(this.map);
+    this.loadMapMarkers(this.map);
+  }
+
+  clearMapMarkers = (map) =>{
+    // map.removeLayer('1');
+    // map.removeLayer(el);
+    // map.removeMarker(1);
 
   }
+
+  loadMapMarkers = (map) =>{
+        //// ADDING FAV SPOTS ////
+    // after the map component is mounted, we want to add points to it
+
+    // var marker;
+    // map.removeLayer(el);
+    // map.eachLayer(function (layer) {
+    //   map.removeLayer(layer);
+    // });
+
+    // for (let i = 0; i < map.getStyle().layers.length; i++) {
+    //   console.log(i)
+    // }
+
+    // map.removeLayer(1);
+
+    let filteredLocations = mapData.features.filter((item) => {
+      return this.state.activeCategories[item.properties.category] === true
+    })
+
+    filteredLocations.forEach(function(marker) {
+
+      // create a DOM element for the marker - these are the divs which house each emoji marker
+      var el = document.createElement('div');
+      
+      el.innerHTML += marker.properties.emoji;
+      el.style.fontSize = 'x-large';
+      el.id = marker.id;
+      
+      // el.addEventListener('click', function() {
+      // window.alert('nothing to see here');
+      // });
+      
+      new mapboxgl.Marker(el)
+      .setLngLat(marker.geometry.coordinates)
+      .addTo(map);
+
+      
+    });
+  }
+
+
 
   componentDidMount() {
     const { lng, lat, zoom } = this.state;
@@ -58,36 +109,8 @@ class Map extends React.Component {
     this.map = map;
     // this is necessary to make 'map' available in the .flyto function
 
-    //// ADDING FAV SPOTS ////
-    // after the map component is mounted, we want to add points to it
 
-    // TODO: how to update this on state change? note - will need to change false to true
-    let filteredLocations = mapData.features.filter((item) => {
-        return this.state.activeCategories[item.properties.category] === false
-    })
-
-    filteredLocations.forEach(function(marker) {
-    // mapData.features.forEach(function(marker) {
-      // create a DOM element for the marker - these are the divs which house each emoji marker
-      var el = document.createElement('div');
-      
-      // el.className = 'mark';
-      el.innerHTML += marker.properties.emoji;
-      el.style.fontSize = 'x-large';
-      el.id = marker.id;
-      // el.style.backgroundColor = 'rgb(230, 230, 230, 0.6)';
-      // el.style.border = '1px solid black';
-      // el.style.borderRadius = '5px';
-      // el.style.padding = '5px';
-       
-      // el.addEventListener('click', function() {
-      // window.alert('nothing to see here');
-      // });
-       
-      new mapboxgl.Marker(el)
-      .setLngLat(marker.geometry.coordinates)
-      .addTo(map);
-      });
+    this.loadMapMarkers(map)
 
 
     map.on('move', () => {
