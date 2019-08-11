@@ -53,8 +53,13 @@ class Map extends React.Component {
     // map.marker.remove();
 
     var currentMarkers = document.getElementsByClassName('marker');
-    for (let i=0; i<currentMarkers.length; i++){
-      currentMarkers[i].remove()
+    // console.log(currentMarkers);
+    var currentMarkersLength = currentMarkers.length;
+    for (let i=0; i<currentMarkersLength; i++){
+        // console.log('removing ', currentMarkers[i]);
+        currentMarkers[0].remove();
+
+    // this.loadMapMarkers(this.map);
     }
 
 
@@ -108,10 +113,13 @@ class Map extends React.Component {
       el.style.fontSize = 'x-large';
       el.id = marker.id;
       el.className = 'marker';
+      el.coordinates = marker.geometry.coordinates
       
-      // el.addEventListener('click', function() {
+      el.addEventListener('click', function() {
       // window.alert('nothing to see here');
-      // });
+      // console.log(marker)
+      // this.flyToLocation(marker.coordinates)
+      });
       
       var marker = new mapboxgl.Marker(el).setLngLat(marker.geometry.coordinates).addTo(map);
 
