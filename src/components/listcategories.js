@@ -21,24 +21,22 @@ class CategoryList extends React.Component{
   }
 
   render(){
-      // console.log(this.props)
       var thisCategory = this.props.category
     return(
         <ListStyle>
-        <div>
-        {categories.map( (item, index) => (
-        <CategoryCard 
-          key={index}
-          category={item}
-          // onClick={(thisCategory)=> this.props.onClicked(thisCategory)}
-          // onClick={()=>{console.log('click??')}}
-          // onClick={(e) => this.handleClick(e)}
-          onCategoryClick={this.props.onCategoryClick}
-          isActive={this.props.activeCategories[item]}
-        />
-      ))}
-        {/* <CategoryCard category={JSON.stringify(this.props.activeCategories)} /> */}
-        </div>
+          <div>
+            {categories.map( (item, index) => (
+              <CategoryCard 
+                key={index}
+                category={item}
+                // onClick={(thisCategory)=> this.props.onClicked(thisCategory)}
+                // onClick={()=>{console.log('click??')}}
+                // onClick={(e) => this.handleClick(e)}
+                onCategoryClick={this.props.onCategoryClick}
+                isActive={this.props.activeCategories[item]}
+              />
+            ))}
+          </div>
         </ListStyle>
   );
   }

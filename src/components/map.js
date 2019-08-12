@@ -105,14 +105,35 @@ class Map extends React.Component {
       el.id = marker.id;
       el.className = 'marker';
       el.coordinates = marker.geometry.coordinates;
+      el.title = marker.properties.name;
 
-      var zoomcords = marker.geometry.coordinates;
-      // console.log('coordinates:', zoomcords)
-
-      
       el.addEventListener('click', function() {
         map.flyTo({center: marker._lngLat, zoom: 17})
       });
+
+      var popup = new mapboxgl.Popup({
+        closeButton: false,
+        closeOnClick: false
+      });
+      
+      el.addEventListener('mouseenter', function() {
+        // TODO: might be cool to zoom in a bit
+
+        // TODO: move popup out of the way
+        
+        popup.setLngLat(marker._lngLat)
+          .setHTML(el.title)
+          .addTo(map);
+
+        // console.log(marker)
+      });
+
+      el.addEventListener('mouseleave', function() {
+        // TODO: might be cool to zoom out a bit
+        popup.remove();
+      });
+
+
       
       var marker = new mapboxgl.Marker(el)
         .setLngLat(marker.geometry.coordinates)
