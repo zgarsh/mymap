@@ -17,10 +17,9 @@ const CategoryStyle = styled.div`
   text-align: center;
   font-size: 20;
 
-  /* :hover {
-      background: rgb(105, 182, 223, 0.6);
+  :hover {
       cursor: pointer;
-  } */
+  }
 
   background-color: ${(props) =>  props.isActive ? "rgb(76, 166, 70, 0.7)" : "rgb(230, 230, 230, 0.7)"};
 

@@ -84,19 +84,10 @@ class Map extends React.Component {
 
   }
 
-  loadMapMarkers = (map) =>{
+  loadMapMarkers = (map) => {
         //// ADDING FAV SPOTS ////
     // after the map component is mounted, we want to add points to it
 
-    // var marker;
-    // map.removeLayer(el);
-    // map.eachLayer(function (layer) {
-    //   map.removeLayer(layer);
-    // });
-
-    // for (let i = 0; i < map.getStyle().layers.length; i++) {
-    //   console.log(i)
-    // }
 
     // map.removeLayer(1);
 
@@ -113,16 +104,19 @@ class Map extends React.Component {
       el.style.fontSize = 'x-large';
       el.id = marker.id;
       el.className = 'marker';
-      el.coordinates = marker.geometry.coordinates
+      el.coordinates = marker.geometry.coordinates;
+
+      var zoomcords = marker.geometry.coordinates;
+      // console.log('coordinates:', zoomcords)
+
       
       el.addEventListener('click', function() {
-      // window.alert('nothing to see here');
-      // console.log(marker)
-      // this.flyToLocation(marker.coordinates)
+        map.flyTo({center: marker._lngLat, zoom: 17})
       });
       
-      var marker = new mapboxgl.Marker(el).setLngLat(marker.geometry.coordinates).addTo(map);
-
+      var marker = new mapboxgl.Marker(el)
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(map);
       
     });
   }
