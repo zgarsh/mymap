@@ -242,6 +242,87 @@
           "type": "Point"
         },
         "id": 15
+      },
+
+
+
+
+
+
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Born",
+          "description": "Originally from Mountain View",
+          "category": "about me",
+          "emoji": "👼",
+          "secondaryEmoji": ""
+        },
+        "geometry": {
+          "coordinates": [ -122.088200, 37.388172 ],
+          "type": "Point"
+        },
+        "id": 16
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "BS",
+          "description": "Got a degree in Biology from Cal Poly",
+          "category": "about me",
+          "emoji": "🎓",
+          "secondaryEmoji": ""
+        },
+        "geometry": {
+          "coordinates": [ -120.655902, 35.299273 ],
+          "type": "Point"
+        },
+        "id": 17
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "First job",
+          "description": "After school I landed a gig as a bus driver/tour guide at the SD Zoo",
+          "category": "about me",
+          "emoji": "🦍",
+          "secondaryEmoji": ""
+        },
+        "geometry": {
+          "coordinates": [ -117.149284, 32.735204 ],
+          "type": "Point"
+        },
+        "id": 18
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Next job",
+          "description": "Next, I went to the CA Academy of Sciences where I showed off the living roof, inner workings of the aquarium, and ~46 million specimens",
+          "category": "about me",
+          "emoji": "🔬",
+          "secondaryEmoji": ""
+        },
+        "geometry": {
+          "coordinates": [ -122.466510, 37.770158 ],
+          "type": "Point"
+        },
+        "id": 19
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Current job",
+          "description": "Applying mapping and research skills from my biology studies, I started at Cruise as a GIS technician and am now a Project Manager for HD map R&D",
+          "category": "about me",
+          "emoji": "🤖",
+          "secondaryEmoji": ""
+        },
+        "geometry": {
+          "coordinates": [ -122.392562, 37.780836 ],
+          "type": "Point"
+        },
+        "id": 20
       }
 
 

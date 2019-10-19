@@ -8,6 +8,7 @@ import TileList from './tilelist'
 import CategoryList from './listcategories'
 
 import 'mapbox-gl/dist/mapbox-gl.css'
+import AboutMe from './aboutmecategory.js';
 
 
 
@@ -201,6 +202,10 @@ class Map extends React.Component {
       <CategoryList
         activeCategories={this.state.activeCategories}
         onCategoryClick={this.onCategoryClick}
+      />
+      <AboutMe
+        activeCategories={this.state.activeCategories}
+        onCategoryClick={this.onCategoryClick}   
       />
       </div>
     );
