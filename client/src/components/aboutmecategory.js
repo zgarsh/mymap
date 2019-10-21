@@ -7,8 +7,8 @@ import CategoryCard from './category.js'
 const ListStyle = styled.div`
   margin: 40px;
   position: fixed;
-  bottom: 20px;
-  right: -20px;
+  bottom: -15px;
+  right: -30px;
   width: 12em;
 `;
 

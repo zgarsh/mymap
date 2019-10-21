@@ -12,7 +12,7 @@ const ListStyle = styled.div`
   width: 12em;
 `;
 
-const categories = ['drink', 'eat', 'play', 'work', 'outdoors', 'events']
+const categories = ['drink', 'eat', 'play', 'work', 'outdoors', 'visit']
 
 class CategoryList extends React.Component{
 
