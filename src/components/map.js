@@ -35,6 +35,7 @@ class Map extends React.Component {
         outdoors: false,
         work: false,
       },
+      visibleMarkers: [],
     };
     this.map = null;
     this.onCategoryClick = this.onCategoryClick.bind(this);
@@ -169,6 +170,37 @@ class Map extends React.Component {
         lat: lat.toFixed(4),
         zoom: map.getZoom().toFixed(2)
       });
+
+
+
+
+
+      /////////
+      function intersectRect(r1, r2) {
+        return !(r2.left > r1.right ||
+          r2.right < r1.left ||
+          r2.top > r1.bottom ||
+          r2.bottom < r1.top);
+      }
+      
+      function getVisibleMarkers() {
+        var cc = map.getContainer();
+        var els = cc.getElementsByClassName('marker');
+        var ccRect = cc.getBoundingClientRect();
+        var visibles = [];
+        for (var i = 0; i < els.length; i++) {
+          var el = els.item(i);
+          var elRect = el.getBoundingClientRect();
+          intersectRect(ccRect, elRect) && visibles.push(parseInt(el.id));
+        }
+        // if (visibles.length > 0) console.log(visibles);
+
+        return visibles
+      }
+      /////////////
+
+      this.setState({visibleMarkers: getVisibleMarkers()});
+
     });
   }
 
@@ -184,6 +216,9 @@ class Map extends React.Component {
   render() {
     const { lng, lat, zoom } = this.state;
 
+
+    
+
     return (
       <div>
       <StyledMap>
@@ -198,6 +233,7 @@ class Map extends React.Component {
       <TileList 
         flyToLocation={this.flyToLocation.bind(this)}
         categories={this.state.activeCategories}
+        visibleMarkers={this.state.visibleMarkers}
       />
       <CategoryList
         activeCategories={this.state.activeCategories}
