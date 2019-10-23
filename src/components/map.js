@@ -41,13 +41,53 @@ class Map extends React.Component {
     this.onCategoryClick = this.onCategoryClick.bind(this);
   }
 
+  //// if you mess it up below, put this back
+  // onCategoryClick = (category) =>{
+  //   let updatedCategories = this.state.activeCategories;
+  //   updatedCategories[category] = !updatedCategories[category];
+  //   this.setState({activeCategories:updatedCategories});
+  //   this.clearMapMarkers(this.map);
+  //   this.loadMapMarkers(this.map);
+  // }
+
+
   onCategoryClick = (category) =>{
-    let updatedCategories = this.state.activeCategories;
-    updatedCategories[category] = !updatedCategories[category];
-    this.setState({activeCategories:updatedCategories});
+    
+    // if about me was not previously selected
+    if (!this.state.activeCategories['about me']){
+      if (category === 'about me'){
+        // if about me was not previously selected and is now selected
+        // console.log('setting only about me to be active')
+        this.setState({activeCategories:{'about me': true}})
+      } else {
+        // if about me was not previously selected and is not now selected
+        // console.log('modifying categories other than about me')
+        let updatedCategories = this.state.activeCategories;
+        updatedCategories[category] = !updatedCategories[category];
+        this.setState({activeCategories:updatedCategories});
+      }
+    } else if (this.state.activeCategories['about me']) {
+      // if about me was previously selected
+      // if about me was previously selected and is clicked again
+      if (category === 'about me'){
+        // console.log('setting active categories to none')
+        this.setState({activeCategories:{}})
+      } else {
+        // if about me was previously selected and something else is clicked
+        // console.log('setting something other than about me to true')
+        this.setState({activeCategories:{[category]: true}})
+      }
+    } else {
+      console.log('something went wrong!')
+    }
+
     this.clearMapMarkers(this.map);
+    // console.log('cleared map markers')
+    
     this.loadMapMarkers(this.map);
+    // console.log('loaded map markers');
   }
+
 
   clearMapMarkers = (map) =>{
     // map.removeLayer('1');
@@ -87,15 +127,22 @@ class Map extends React.Component {
   }
 
   loadMapMarkers = (map) => {
-        //// ADDING FAV SPOTS ////
-    // after the map component is mounted, we want to add points to it
+    // after the map component is mounted, add points to it
 
 
     // map.removeLayer(1);
 
     let filteredLocations = mapData.features.filter((item) => {
-      return this.state.activeCategories[item.properties.category] === true
+      // console.log(item, this.state.activeCategories[item.properties.category])
+      return this.state.activeCategories[item.properties.category]// === true
+
+      // TODO: Why does this evaluate to true for 'about me' when it's not in the state?
+
     })
+
+    console.log('about me status:', this.state.activeCategories['about me'])
+
+    // console.log(filteredLocations)
 
     filteredLocations.forEach(function(marker) {
 
