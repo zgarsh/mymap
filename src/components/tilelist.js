@@ -24,10 +24,16 @@ class TileList extends React.Component{
 
   render(){
 
-    
+
     let filteredLocations = mapData.features.filter((item) => {
         return this.props.categories[item.properties.category] === true && this.props.visibleMarkers.includes(item.id)
     })
+
+    if (this.props.categories["about me"] === true){
+      filteredLocations = mapData.features.filter((item) => {
+        return item.properties.category === "about me"
+      })
+    }
 
     // let filteredLocations = mapData.features
 
