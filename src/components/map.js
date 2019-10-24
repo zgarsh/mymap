@@ -57,8 +57,9 @@ class Map extends React.Component {
     if (!this.state.activeCategories['about me']){
       if (category === 'about me'){
         // if about me was not previously selected and is now selected
-        // console.log('setting only about me to be active')
-        this.setState({activeCategories:{'about me': true}})
+        console.log('setting state to "about me": true')
+        // this.setState({activeCategories:{'about me': true}})
+        this.setState({activeCategories:{'about me': true}}, ()=>this.loadMapMarkers(this.map))
       } else {
         // if about me was not previously selected and is not now selected
         // console.log('modifying categories other than about me')
@@ -71,11 +72,14 @@ class Map extends React.Component {
       // if about me was previously selected and is clicked again
       if (category === 'about me'){
         // console.log('setting active categories to none')
+        console.log('setting state to "about me": false')
         this.setState({activeCategories:{}})
+        this.setState({activeCategories:{}}, ()=>this.loadMapMarkers(this.map))
       } else {
         // if about me was previously selected and something else is clicked
         // console.log('setting something other than about me to true')
-        this.setState({activeCategories:{[category]: true}})
+        console.log('setting state to about me: false and something else: true')
+        this.setState({activeCategories:{[category]: true}}, ()=>this.loadMapMarkers(this.map))
       }
     } else {
       console.log('something went wrong!')
@@ -127,6 +131,7 @@ class Map extends React.Component {
   }
 
   loadMapMarkers = (map) => {
+    this.clearMapMarkers(this.map)
     // after the map component is mounted, add points to it
 
 
@@ -137,12 +142,11 @@ class Map extends React.Component {
       return this.state.activeCategories[item.properties.category]// === true
 
       // TODO: Why does this evaluate to true for 'about me' when it's not in the state?
-
     })
 
-    console.log('about me status:', this.state.activeCategories['about me'])
+    console.log('"about me" status during loadMapMarkers:', this.state.activeCategories['about me'])
 
-    // console.log(filteredLocations)
+    
 
     filteredLocations.forEach(function(marker) {
 
@@ -189,6 +193,7 @@ class Map extends React.Component {
         .addTo(map);
       
     });
+
   }
 
 
@@ -261,6 +266,9 @@ class Map extends React.Component {
 
   
   render() {
+
+    console.log('"about me" status during render:', this.state.activeCategories['about me'])
+    console.log('rendering')
     const { lng, lat, zoom } = this.state;
 
 
