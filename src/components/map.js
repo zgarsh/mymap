@@ -29,11 +29,7 @@ class Map extends React.Component {
       lat: 37.7626,
       zoom: 10,
       activeCategories: {
-        play: false,
-        eat: false,
-        drink: false,
-        outdoors: false,
-        work: false,
+        'about me': true
       },
       visibleMarkers: [],
     };
