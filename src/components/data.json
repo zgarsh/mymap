@@ -233,7 +233,7 @@
         "properties": {
           "name": "Mission Bowling Club",
           "description": "Adults only bowling <3",
-          "category": "play",
+          "category": "visit",
           "emoji": "🎳",
           "secondaryEmoji": ""
         },
