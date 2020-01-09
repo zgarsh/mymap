@@ -328,7 +328,7 @@
         "type": "Feature",
         "properties": {
           "name": "BS",
-          "description": "Got a degree in Biology from Cal Poly",
+          "description": "Graduated from Cal Poly with a degree in Biology, with coursework in statistics, GIS, and Chemistry. Served as a research associate in Molecular Biology and Applied Biotechnology labs",
           "category": "about me",
           "emoji": "🎓",
           "secondaryEmoji": ""
@@ -343,7 +343,7 @@
         "type": "Feature",
         "properties": {
           "name": "First job",
-          "description": "After school I landed a gig as a bus driver/tour guide at the SD Zoo",
+          "description": "After school I landed a gig as a bus driver/tour guide at the SD Zoo. This makes me a great asset in trivia, and also means I can reverse a 40' bus through an S-curve",
           "category": "about me",
           "emoji": "🦍",
           "secondaryEmoji": ""
@@ -373,7 +373,7 @@
         "type": "Feature",
         "properties": {
           "name": "Current job",
-          "description": "Applying mapping and research skills from my biology studies, I started at Cruise as a GIS technician and am now a Project Manager for HD map R&D",
+          "description": "Applying mapping and research skills from my biology studies, I started at Cruise as a GIS technician and am now a Data Analyst for the Mapping team. I've also taken a liking to software, so I made this site. Thanks for stopping by!",
           "category": "about me",
           "emoji": "🤖",
           "secondaryEmoji": ""
