@@ -328,7 +328,7 @@
         "type": "Feature",
         "properties": {
           "name": "BS",
-          "description": "Graduated from Cal Poly with a degree in Biology, with coursework in statistics, GIS, and Chemistry. Served as a research associate in Molecular Biology and Applied Biotechnology labs",
+          "description": "Graduated from Cal Poly with a degree in Biology and coursework in statistics, GIS, and Chemistry. Served as a research associate in Molecular Biology and Applied Biotechnology labs",
           "category": "about me",
           "emoji": "🎓",
           "secondaryEmoji": ""
