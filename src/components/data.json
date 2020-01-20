@@ -325,7 +325,7 @@
             "type": "Feature",
             "properties": {
               "name": "Hello!",
-              "description": "I'm Zach. You can click categories on the right and zoom around to learn about my favorite places. You can also learn more about me on my "<a href='http://www.github.com/zgarsh'>github</a>", my <a href='https://www.instagram.com/zwgarcia/'>instagram</a> for creative stuff, and my <a href='https://www.linkedin.com/in/zwgarcia/>linkedin</a>.",
+              "description": "I'm Zach. To learn about places I like, you can choose categories on the right and explore. You can also learn about my background below, and see stuff I've made on my instagram and github (@zgarsh)",
               "category": "about me",
               "emoji": "🏡",
               "secondaryEmoji": ""
