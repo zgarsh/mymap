@@ -318,7 +318,25 @@
         {"type": "Feature", "properties": {"name":"Hearst castle", "description": "Not really a castle but impressive nonetheless. Watch out for feral zebra on the way", "category": "visit", "emoji": "🏰", "secondaryEmoji": ""}, "geometry": { "coordinates": [-121.169035, 35.685439], "type": "Point"}, "id":77},
         {"type": "Feature", "properties": {"name":"Minas de Wanda", "description": "If you've ever wondered where those amethyst geodes come from...", "category": "visit", "emoji": "💎", "secondaryEmoji": ""}, "geometry": { "coordinates": [-54.599287, -25.958112], "type": "Point"}, "id":78}, 
 
-      {
+      
+      
+      
+        {
+            "type": "Feature",
+            "properties": {
+              "name": "Hello!",
+              "description": "I'm Zach. You can click categories on the right and zoom around to learn about my favorite places. You can also learn more about me on my <a href='http://www.github.com/zgarsh'>github</a>, my <a href='https://www.instagram.com/zwgarcia/'>instagram</a> for creative stuff, and my <a href='https://www.linkedin.com/in/zwgarcia/>linkedin</a>.",
+              "category": "about me",
+              "emoji": "🏡",
+              "secondaryEmoji": ""
+            },
+            "geometry": {
+              "coordinates": [ -122.432959, 37.762616 ],
+              "type": "Point"
+            },
+            "id": 98242
+        },
+              {
         "type": "Feature",
         "properties": {
           "name": "Born",
