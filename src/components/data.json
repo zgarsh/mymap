@@ -259,7 +259,6 @@
         "id": 999
       },
 
-      
         {"type": "Feature", "properties": {"name":"Salesforce Park", "description": "Despite the cracks in the foundation this place is actually pretty cool", "category": "outdoors", "emoji": "🌲", "secondaryEmoji": ""}, "geometry": { "coordinates": [-122.396567, 37.789571], "type": "Point"}, "id":21},
         {"type": "Feature", "properties": {"name":"Field Museum", "description": "eat", "category": "visit", "emoji": "🦖", "secondaryEmoji": ""}, "geometry": { "coordinates": [-87.616965, 41.866130], "type": "Point"}, "id":22},
         {"type": "Feature", "properties": {"name":"Little Goat Diner", "description": "visit", "category": "eat", "emoji": "🍨", "secondaryEmoji": ""}, "geometry": { "coordinates": [-87.648405, 41.884685], "type": "Point"}, "id":23},
@@ -313,12 +312,11 @@
         {"type": "Feature", "properties": {"name":"California Carnivores", "description": "Variety of carnivorous and tropicla plants including pitchers, sundews, orchids, and a corpse flower", "category": "visit", "emoji": "🌱", "secondaryEmoji": ""}, "geometry": { "coordinates": [-122.789905, 38.374899], "type": "Point"}, "id":71},
         {"type": "Feature", "properties": {"name":"Mendoza biking wine tours", "description": "Biking on freeways between wine tastings might not sound like the safest thing to do, but seeing wild guanaco along the way makes it worthwhile", "category": "visit", "emoji": "🚲", "secondaryEmoji": ""}, "geometry": { "coordinates": [-68.839065, -32.890881], "type": "Point"}, "id":72},
         {"type": "Feature", "properties": {"name":"Yuanbao Jiaozi", "description": "Small menu with just the hits - dumplings and beef noodle soup", "category": "eat", "emoji": "🥟", "secondaryEmoji": ""}, "geometry": { "coordinates": [-122.480752, 37.763536], "type": "Point"}, "id":73},
-        {"type": "Feature", "properties": {"name":"Salta", "description": "Beautiful town surrounded by awesome outdoor activities", "category": "visit", "emoji": "🧂", "secondaryEmoji": ""}, "geometry": { "coordinates": [], "type": "Point"}, "id":74},
+        {"type": "Feature", "properties": {"name":"Salta", "description": "Beautiful town surrounded by awesome outdoor activities", "category": "visit", "emoji": "🧂", "secondaryEmoji": ""}, "geometry": { "coordinates": [-65.423603, -24.783485], "type": "Point"}, "id":74},
         {"type": "Feature", "properties": {"name":"Purmamarca", "description": "While you're in Jujuy, visit for impressive views and local crafts", "category": "visit", "emoji": "🧣", "secondaryEmoji": ""}, "geometry": { "coordinates": [-65.499229, -23.746687], "type": "Point"}, "id":75},
         {"type": "Feature", "properties": {"name":"Iguazu", "description": "Impressive waterfalls can be seen from Paraguay, Brazil, or Argentina. The speed boat tour is worth it", "category": "visit", "emoji": "🌊", "secondaryEmoji": ""}, "geometry": { "coordinates": [-54.427226, -25.695315], "type": "Point"}, "id":76},
         {"type": "Feature", "properties": {"name":"Restaurant in oaxaca where we sat on the balcony", "description": "Not really a castle but impressive nonetheless. Watch out for feral zebra on the way", "category": "visit", "emoji": "🏰", "secondaryEmoji": ""}, "geometry": { "coordinates": [-121.169035, 35.685439], "type": "Point"}, "id":77},
         {"type": "Feature", "properties": {"name":"Minas de Wanda", "description": "If you've ever wondered where those amethyst geodes come from...", "category": "visit", "emoji": "💎", "secondaryEmoji": ""}, "geometry": { "coordinates": [-54.599287, -25.958112], "type": "Point"}, "id":78},
-
 
       {
         "type": "Feature",
