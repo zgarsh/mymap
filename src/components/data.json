@@ -324,10 +324,10 @@
         {
             "type": "Feature",
             "properties": {
-              "name": "Hello!",
-              "description": "I'm Zach. To learn about places I like, you can choose categories on the right and explore. You can also learn about my background below, and see stuff I've made on my instagram and github (@zgarsh)",
+              "name": "",
+              "description": "Hello! I'm Zach. To learn about places I like, you can choose categories on the right and explore. You can also learn about my background by clicking on the tiles below, and see stuff I've made on my instagram and github (@zgarsh)",
               "category": "about me",
-              "emoji": "🏡",
+              "emoji": "",
               "secondaryEmoji": ""
             },
             "geometry": {
